@@ -1,5 +1,5 @@
-const State = require('./State');
-
-module.exports = function of(r) {
-  return State(s => [r, s]);
+const of = r => function State(s) {
+  return [r, s];
 };
+
+module.exports = of;

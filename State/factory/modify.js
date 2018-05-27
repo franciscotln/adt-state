@@ -1,5 +1,5 @@
-const State = require('./State');
-
-module.exports = function modify(f) {
-  return State(s => [null, f(s)]);
+const modify = f => function State(s) {
+  return [null, f(s)];
 };
+
+module.exports = modify;
