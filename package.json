@@ -1,0 +1,23 @@
+{
+  "author": "Francisco Tavares de Lima Neto",
+  "description": "Function based State ADT",
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "~4.9.0"
+  },
+  "keywords": [
+    "ADT",
+    "State"
+  ],
+  "license": "MIT",
+  "main": "./State/index.js",
+  "name": "adt-state",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscotln/adt-state.git"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "version": "1.0.0"
+}
