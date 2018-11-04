@@ -17,7 +17,7 @@
     "url": "git+https://github.com/franciscotln/adt-state.git"
   },
   "scripts": {
-    "test": "tape test.js"
+    "test": "tape ./**/*.test.js"
   },
   "version": "1.0.1"
 }

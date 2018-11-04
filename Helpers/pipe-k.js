@@ -1,11 +1,14 @@
-const chain = require('../State/operators/chain');
-
-module.exports = function pipeK(...fns) {
-  return v0 => {
-    let v = fns[0](v0);
-    for (let i = 1; i < fns.length; i++) {
-      v = chain(fns[i])(v);
-    }
-    return v;
-  };
+const pipeK = (...fns) => v0 => {
+  const [head, ...tail] = fns;
+  let State = head(v0);
+  for (const f of tail) {
+    const _State = State;
+    State = s => {
+      const [r, s1] = _State(s);
+      return f(r)(s1);
+    };
+  }
+  return State;
 };
+
+module.exports = pipeK;

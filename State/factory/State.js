@@ -1,3 +1,5 @@
-module.exports = f => function State(s) {
+const State = f => function State(s) {
   return f(s);
 };
+
+module.exports = State;
